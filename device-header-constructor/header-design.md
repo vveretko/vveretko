@@ -4,9 +4,9 @@ You can customize the appeal of the header by easily changing its size, color, a
 
 ## How to change Header Design?
 
-Press the "bucket" icon to access the Header Settings page. 
+Press the "paint bucket" icon to access the Header Settings page. 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/6a6cc2d7-a569-4450-a6d0-5bc28ff81194/Untitled.png)
+![image](https://github.com/vveretko/vveretko/assets/72790181/466d32ca-3872-4753-bab5-5aec17f2a50c)
 
 ## Header settings:
 
