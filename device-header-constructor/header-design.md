@@ -41,16 +41,82 @@ Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a 
 You can change the *color* and *contentDesign* properties from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20, and color hexadecimal values in the HTTP API URL must include the hash # character urlencoded as %23.
 
 #### Set color
-//#D3435C - Blynk RED
-Blynk.setProperty(V1, "color", "Air temperature");
-#### Set Color
-//#D3435C - Blynk RED 
-Blynk.setProperty(V1, "color", "#D3435C");
+`//#D3435C - Blynk RED
+Blynk.setProperty(V1, "color", "Air temperature");`
+
+#### Set content design
+`Blynk.setProperty(V1, "contentDesign", "dark");`
+
+### Change Header properties via HTTPs API
+
+{% swagger baseUrl="https://{server_address}" path="/external/api/update/property?token={your 32 char token}&pin={your vPin}&{property}={value}" method="get" summary="Updates the Datastream Property and all assigned Widgets" %}
+{% swagger-description %}
+The endpoint allows you to update the Datastream Property value via GET request. All widgets (both web and mobile) that are assigned to this datastream will inherit this property. The Datastream Property is persistent and will be stored forever until you change it with another value. In order to clear the property you need to clear the device data in device actions menu.
+
+**Example:**\
+`https://blynk.cloud/external/api/update/property?token=GVki9IC70vb3IqvsV0YD3el4y0OpneL1&pin=V2&color=%2300000`
+
+`https://blynk.cloud/external/api/update/property?token=GVki9IC70vb3IqvsV0YD3el4y0OpneL1&pin=V1&contentDesign=dark`
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="token" type="string" required="true" %}
+Device 
+
+[auth token](../../concepts/device.md#authtoken)
+
+ from Device info
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="pin" type="string" required="true" %}
+The datastream 
+
+[virtual pin](../../blynk.console/templates/datastreams/virtual-pin.md)
+
+ (should start with "v")
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="{property}" type="string" %}
+The property of the widget you want to update: 
+
+`color`
+
+, 
+
+`contentDesign`
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="{server address}" type="string" required="true" %}
+Get from the bottom right of your Blynk console. 
+
+[More information](../../blynk.cloud/device-https-api/troubleshooting.md)
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="color" type="string" %}
+Header color hexadecimal, must include the hash # character urlencoded as %23.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="contentDesign" type="string" %}
+light or dark
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Success" %}
+```
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="Could not find a device token" %}
+```
+{"error":{"message":"Invalid token."}}
+```
+{% endswagger-response %}
+{% endswagger %}
 
 ## Resizing
 
 In the default state, the header size depends on its content. However, you can manually change the size by dragging the handle at the bottom of it.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/35769529-59ce-416b-a9fb-83eec09c38e3/Untitled.png)
+![image](https://github.com/vveretko/vveretko/assets/72790181/b849c4c9-10b2-4f1c-a154-4b2d64521bdb)
 
-Presets - maybe when the flow is finilized???
