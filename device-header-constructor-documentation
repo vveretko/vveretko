@@ -4,7 +4,7 @@
 
 The header constructor allows you to customize the header of your device according to your preferences. You can add important labels such as Connection Status and Last Reported timestamp, display an image inside the device's header, or assign Standalone Pages to the Header Buttons. You can also experiment with colors to make it more visually appealing.
 
-# Header buttons
+## Header buttons
 
 You can add up to 2 header buttons and assign a Standalone Page to each of them.
 
@@ -12,7 +12,7 @@ To add a header button, simply click the “plus” icon at the top of the heade
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/6c9265cb-1448-4037-8b98-27e41bda66ad/Untitled.png)
 
-## Header button settings:
+### Header button settings:
 
 **Datastream (optional)** - For setProperty.
 
@@ -22,33 +22,34 @@ To add a header button, simply click the “plus” icon at the top of the heade
 
 **Appearance Animation** - The page can slide in from the bottom or from the right.
 
-### **Change Header Properties**
+#### **Change Header Button Properties**
 
-You can change certain properties of the Header from your hardware. For that, use this command:
+You can change *isHidden* of the Header from your hardware. For that, use this command:
 
-`Blynk.setProperty(vPin, "headerProperty", "propertyValue");`
+`Blynk.setProperty(vPin, "isHidden", "propertyValue");`
 
 Where:
 
 `vPin` is: virtual pin number the widget is assigned to
 
-`headerProperty`: property you want to change
+`isHidden`: property that controls the button visibility
 
-`propertyValue`: value of the property you want to change
+`propertyValue`: value of the property you want to change. *true* and *false* values are available.
 
 Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
 
-### **Properties you can change**
+#### **Change widget properties via HTTPs API**
 
-You can change the *isDisabled* and *isHidden* properties from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20.
+https://{server_address}
+/external/api/update/property?token={your 32 char token}&pin={your vPin}&{property}={value}
+Updates the Datastream Property and all assigned Widgets
 
-*Note that the header always contains two system buttons that cannot be edited: Timeline and Device Info.*
 
-# Header Design
+## Header Design
 
 You can customize the appeal of the header by easily changing its size, color, adding a border, or modifying its content colors.
 
-## How to change Header Design?
+### How to change Header Design?
 
 Press the "bucket" icon to access the Header Settings page. 
 
@@ -66,7 +67,7 @@ B**ackground color** - Choose any color you want and the header background will 
 
 **Border -** You can apply a bottom stroke or a shadow to the header body to separate it from other content.
 
-### **Change Header Properties**
+#### **Change Header Properties**
 
 You can change certain properties of the Header from your hardware. For that, use this command:
 
@@ -82,9 +83,16 @@ Where:
 
 Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
 
-### **Properties you can change**
+#### **Properties you can change**
 
 You can change the *color* and *contentDesign* properties from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20, and color hexadecimal values in the HTTP API URL must include the hash # character urlencoded as %23.
+
+#### Set color
+//#D3435C - Blynk RED
+Blynk.setProperty(V1, "color", "Air temperature");
+#### Set Color
+//#D3435C - Blynk RED 
+Blynk.setProperty(V1, "color", "#D3435C");
 
 ### Resizing
 
@@ -94,11 +102,11 @@ In the default state, the header size depends on its content. However, you can m
 
 Presets - maybe when the flow is finilized???
 
-# Header Widgets
+## Header Widgets
 
 Header widgets enable the display of important information in the device header, such as battery level, the last reported timestamp, datastream value, and more.
 
-## **Adding and Deleting**
+### **Adding and Deleting**
 
 To add a header widget, click on the "plus" icon located below the Template name, which will open the Widget Box. Select the desired widget from the available options.
 
@@ -108,17 +116,17 @@ To remove a widget, press on it to access its settings, and then tap the “tras
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/89fd1b73-6716-4496-9e49-6ac76e9fd767/Untitled.png)
 
-## Connection Status widget
+### Connection Status widget
 
 This widget displays the device’s current status as a text label.
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/5ba7781d-5d2e-45b8-913c-c4d9d57f7909/Untitled.png)
 
-### Settings
+#### Settings
 
 **Datastream (optional)** - For setProperty.
 
-### **Change Widget Properties**
+#### **Change Widget Properties**
 
 You can change certain properties of the Widget from your hardware. For that, use this command:
 
@@ -134,17 +142,17 @@ Where:
 
 Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
 
-### **Properties you can change**
+#### **Properties you can change**
 
 You can change the properties *isDisabled and* *isHidden* of the widget from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20.
 
-## Last Reported widget
+### Last Reported widget
 
 This widget shows the timestamp of the last time Blynk received the data from the device.
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/04d5601d-bd99-4730-966e-1d8474fcf323/Untitled.png)
 
-### Settings
+#### Settings
 
 **Datastream (optional)** - For setProperty
 
@@ -158,7 +166,7 @@ It works only for virtual, enumerable, and location pins, not digital and analog
 
 **Show label** - To show/hide the “Last reported” text.
 
-### **Change Widget Properties**
+#### **Change Widget Properties**
 
 You can change certain properties of the Widget from your hardware. For that, use this command:
 
@@ -174,40 +182,40 @@ Where:
 
 Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
 
-### **Properties you can change**
+#### **Properties you can change**
 
 You can change the properties *isDisabled and* *isHidden* of the widget from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20.
 
-## Tabs widget
+### Tabs widget
 
 Adds one or more tabs to the top of the device mobile dashboard in order to expand and organize the user interface space. You can drag widgets between tabs.
 Note that plan limits apply here.
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/eb55df15-c356-453e-9d6a-a704c5852401/Untitled.png)
 
-### **Navigating the Tabs Editor:**
+#### **Navigating the Tabs Editor:**
 
 To access the Tabs editor, simply tap on the active tab. In the editor, you can rename tabs, alter their order, add new tabs, and swipe left to delete a tab. Note that the last two tabs are permanent and cannot be removed, but you can delete the entire widget by pressing the “Trash” icon located at the top right.
 
-### **Moving Widgets Between Tabs:**
+#### **Moving Widgets Between Tabs:**
 
 1. Press and hold the widget you wish to move.
 2. Drag it over the tab where you want it to be placed and hold until the tab opens.
 3. Release the widget in the desired position to seamlessly move it between tabs.
 
-## Datastream Value widget
+### Datastream Value widget
 
 Displays the latest datastream / virtual pin value. Units assigned to the datastream are also displayed. Labels may also be optionally added before and after the displayed value.
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/e2de0c53-6a7e-4998-822a-4abae68c2239/Untitled.png)
 
-### Settings
+#### Settings
 
 **Datastream** - Select or create a datastream of [data type](notion://www.notion.so/en/blynk.console/templates/datastreams/datastreams-common-settings/data-type) integer, double, enumerable or string.
 
 **Label** - Set custom label before the value. E.g Temperature: `/value/`
 
-### **Change Widget Properties**
+#### **Change Widget Properties**
 
 You can change certain properties of the Widget from your hardware. For that, use this command:
 
@@ -223,17 +231,17 @@ Where:
 
 Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
 
-### **Properties you can change**
+#### **Properties you can change**
 
 You can change the properties *isDisabled and* *isHidden* of the widget from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20.
 
-## Image widget
+### Image widget
 
 Improve your header visually with custom image that can be controlled from hardware.
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/633623b6-a872-410c-885d-7a7437e122e9/Untitled.png)
 
-### Settings
+#### Settings
 
 **Theme** - Define how the widget design will appear in different app themes.
 
@@ -247,7 +255,7 @@ Improve your header visually with custom image that can be controlled from hardw
 
 **Images scaling** - Choose between FIT or FILL options to adjust how the image appears within the container.
 
-### **Change Widget Properties**
+#### **Change Widget Properties**
 
 You can change certain properties of the Widget from your hardware. For that, use this command:
 
@@ -263,17 +271,17 @@ Where:
 
 Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
 
-### **Properties you can change**
+#### **Properties you can change**
 
 You can change the properties *isDisabled*, *isHidden, url or urls* of the widget from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20.
 
-## Battery level widget
+### Battery level widget
 
 This widget provides a clear visual representation of your battery level, accompanied by a percentage indicator for quick reference.
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/2d9366ae-adb0-473b-9e5f-9905beb3a1c3/Untitled.png)
 
-### Settings
+#### Settings
 
 **Datastream** - Select or create a datastream of [data type](notion://www.notion.so/en/blynk.console/templates/datastreams/datastreams-common-settings/data-type) integer or double.
 
@@ -281,7 +289,7 @@ Value should come in 0-100 range.
 
 **Show value** - You can bide the value to see the battery icon only.
 
-### **Change Widget Properties**
+#### **Change Widget Properties**
 
 You can change certain properties of the Widget from your hardware. For that, use this command:
 
@@ -297,21 +305,21 @@ Where:
 
 Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
 
-### **Properties you can change**
+#### **Properties you can change**
 
 You can change the properties *isDisabled and* *isHidden* of the widget from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20.
 
-## Tags widget
+### Tags widget
 
 Display a list of tags assigned to the device.
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/e7823fa5-c3c8-4bf5-800c-b8e36a74e211/Untitled.png)
 
-### Settings
+#### Settings
 
 **Datastream (optional)** - For setProperty.
 
-### **Change Widget Properties**
+#### **Change Widget Properties**
 
 You can change certain properties of the Widget from your hardware. For that, use this command:
 
@@ -327,6 +335,6 @@ Where:
 
 Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
 
-### **Properties you can change**
+#### **Properties you can change**
 
 You can change the properties *isDisabled and* *isHidden* of the widget from your hardware, or via an [HTTP API](notion://www.notion.so/en/blynk.cloud). The URL must be encoded, so spaces in labels must be replaced with %20.
