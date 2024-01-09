@@ -4,6 +4,7 @@ You can add up to 2 header buttons and assign a Standalone Page to each of them.
 
 To add a header button, simply click the “plus” icon at the top of the header, and its settings will open.
 
+![add-header-button](https://github.com/vveretko/vveretko/assets/72790181/070d1469-ce30-464e-bf57-b942ba1f9909)
 
 ## Header button settings:
 
