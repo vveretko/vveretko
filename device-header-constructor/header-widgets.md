@@ -16,7 +16,7 @@ To remove a widget, press on it to access its settings, and then tap the “tras
 
 This widget displays the device’s current status as a text label.
 
-![image](https://github.com/vveretko/vveretko/assets/72790181/c89191d9-7db7-4287-bffc-484fded7fa61)
+![connection-status-header-widget](https://github.com/vveretko/vveretko/assets/72790181/c89191d9-7db7-4287-bffc-484fded7fa61)
 
 ### Settings
 
@@ -97,7 +97,7 @@ true or false
 
 This widget shows the timestamp of the last time Blynk received the data from the device.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/04d5601d-bd99-4730-966e-1d8474fcf323/Untitled.png)
+![last-reported-header-widget](https://github.com/vveretko/vveretko/assets/72790181/b50238c6-d6a3-4040-884d-7a8118b9e2e6)
 
 ### Settings
 
@@ -182,7 +182,7 @@ true or false
 Adds one or more tabs to the top of the device mobile dashboard in order to expand and organize the user interface space. You can drag widgets between tabs.
 Note that plan limits apply here.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/eb55df15-c356-453e-9d6a-a704c5852401/Untitled.png)
+![image](https://github.com/vveretko/vveretko/assets/72790181/50b2b7e0-20f2-47d5-bd62-99ecac3f6425)
 
 ### **Navigating the Tabs Editor:**
 
@@ -198,7 +198,7 @@ To access the Tabs editor, simply tap on the active tab. In the editor, you can 
 
 Displays the latest datastream / virtual pin value. Units assigned to the datastream are also displayed. Labels may also be optionally added before and after the displayed value.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/e2de0c53-6a7e-4998-822a-4abae68c2239/Untitled.png)
+![datastream-value-header-widget](https://github.com/vveretko/vveretko/assets/72790181/5c13fa74-a888-4011-8ddb-08fd0501aef6)
 
 ### Settings
 
@@ -280,7 +280,7 @@ true or false
 
 Improve your header visually with a custom image that can be controlled from hardware.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/633623b6-a872-410c-885d-7a7437e122e9/Untitled.png)
+![image-header-widget](https://github.com/vveretko/vveretko/assets/72790181/f12df0fe-8d2e-485e-a4f7-b18738fa2eff)
 
 ### Settings
 
@@ -421,7 +421,7 @@ true or false
 
 This widget provides a clear visual representation of your battery level, accompanied by a percentage indicator for quick reference.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/2d9366ae-adb0-473b-9e5f-9905beb3a1c3/Untitled.png)
+![battery-level-header-widget](https://github.com/vveretko/vveretko/assets/72790181/541084a7-3475-4f72-981d-168213b1fc99)
 
 ### Settings
 
@@ -506,7 +506,7 @@ true or false
 
 Display a list of tags assigned to the device.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/e7823fa5-c3c8-4bf5-800c-b8e36a74e211/Untitled.png)
+![tags-header-widget](https://github.com/vveretko/vveretko/assets/72790181/11f7b8a0-ccf3-4a2d-82e2-74b36f15bcfa)
 
 ### Settings
 
