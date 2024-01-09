@@ -4,7 +4,7 @@ You can add up to 2 header buttons and assign a Standalone Page to each of them.
 
 To add a header button, simply click the “plus” icon at the top of the header, and its settings will open.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/20341bdb-5e1a-4881-895e-6e08b23ae969/6c9265cb-1448-4037-8b98-27e41bda66ad/Untitled.png)
+![device-header-components](https://github.com/vveretko/vveretko/assets/72790181/9b9e529c-fa12-4dbd-b678-7d9529d13ddc)
 
 ## Header button settings:
 
@@ -18,7 +18,7 @@ To add a header button, simply click the “plus” icon at the top of the heade
 
 ### **Change Header Button Properties**
 
-You can change *isHidden* of the Header from your hardware. For that, use this command:
+You can change *isHidden* of the Header Button from your hardware. For that, use this command:
 
 `Blynk.setProperty(vPin, "isHidden", "propertyValue");`
 
@@ -28,12 +28,60 @@ Where:
 
 `isHidden`: property that controls the button visibility
 
-`propertyValue`: value of the property you want to change. *true* and *false* values are available.
+`propertyValue`: value of the property you want to change. *true* and *false* values are supported.
 
-Don't put **`Blynk.setProperty()`**into the **`void loop()`** as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers.
+{% hint style="danger" %} Don't put **Blynk.setProperty()**into the void loop() as it can cause a flood of messages and your hardware will be disconnected. Send such updates only when necessary, or use timers. {% endhint %}
 
-### **Change widget properties via HTTPs API**
+### Change button properties via HTTPs API
 
-https://{server_address}
-/external/api/update/property?token={your 32 char token}&pin={your vPin}&{property}={value}
-Updates the Datastream Property and all assigned Widgets
+{% swagger baseUrl="https://{server_address}" path="/external/api/update/property?token={your 32 char token}&pin={your vPin}&{property}={value}" method="get" summary="Updates the Datastream Property and all assigned Widgets" %}
+{% swagger-description %}
+The endpoint allows you to update the Datastream Property value via GET request. All widgets (both web and mobile) that are assigned to this datastream will inherit this property. The Datastream Property is persistent and will be stored forever until you change it with another value. In order to clear the property you need to clear the device data in device actions menu.
+
+**Example:**\
+`https://blynk.cloud/external/api/update/property?token=GVki9IC70vb3IqvsV0YD3el4y0OpneL1&pin=V1&isHidden=true`
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="token" type="string" required="true" %}
+Device 
+
+[auth token](../../concepts/device.md#authtoken)
+
+ from Device info
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="pin" type="string" required="true" %}
+The datastream 
+
+[virtual pin](../../blynk.console/templates/datastreams/virtual-pin.md)
+
+ (should start with "v")
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="{property}" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="{server address}" type="string" required="true" %}
+Get from the bottom right of your Blynk console. 
+
+[More information](../../blynk.cloud/device-https-api/troubleshooting.md)
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="isHidden" type="string" %}
+true or false
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Success" %}
+```
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="Could not find a device token" %}
+```
+{"error":{"message":"Invalid token."}}
+```
+{% endswagger-response %}
+{% endswagger %}
