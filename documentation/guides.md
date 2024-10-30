@@ -1,10 +1,10 @@
-## Device Activation Guide
-By default, all devices use the same provisioning/claiming instructions, but it happens, that the device requires a specific Installation Guide, Troubleshooting link or Device Prearation Instruction. You can set them up for each Template separataly:
-Go to Template
-Open the User Guides tab
-Press on the item you want to change.
+## User Guides
+By default, all devices use the same provisioning/claiming instructions, but occasionally, the device may require a specific Installation Guide, Troubleshooting link or Device Preparation Instructions. You can set them up for each Template separately:
+1. Go to Template
+2. Open the User Guides tab
+3. Click on the item you’d like to modify
 
-_You can reset the Guides to default by pressing the Reset To Default button_.
+_You can reset the Guides to default by clicking the Reset To Default button_.
 > This feature is available with our Enterprise plan. [Contact Support] (https://blynk.io/contact-us-business)
 
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YLKVXxLLrTrK7nKmEA6IAq/Blynk.Documentation---source?node-id=14-21606&embed-host=share" allowfullscreen></iframe>
@@ -31,7 +31,7 @@ To ensure your guide is clear and well-structured, we support Markdown syntax. B
 
 #### Lists
 
-- Use **Ordered Lists** for steps that need to follow a specific sequence.
+- Use **Ordered Lists** for steps that must follow a specific order.
 - Use **Unordered Lists** for items that do not require a particular order.
 
 **Example:**
@@ -74,14 +74,14 @@ For more details, visit the [official documentation](https://example.com/documen
 - 4000 characters max
 - 10 steps max
 
-### Device Preparation Instructions
+### Device Activation Guide
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YLKVXxLLrTrK7nKmEA6IAq/Blynk.Documentation---source?node-id=14-21096&embed-host=share" allowfullscreen></iframe>
 
 To ensure your instructions are clear and well-structured, we support Markdown syntax. Below are the essential Markdown elements you can use:
 
 #### Headlines
 
-- Use use H1 (`#`), H2 (`##`) and H3 (`###`)  to structure your instructions.
+- Use H1 (`#`), H2 (`##`) and H3 (`###`)  to structure your instructions.
 
 #### Lists
 
