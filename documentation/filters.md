@@ -60,7 +60,8 @@ Each filter type supports various filtering conditions depending on the paramete
 2. Select the filter type from the dropdown menu.
 3. Apply the desired filtering condition and enter the necessary values.
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YLKVXxLLrTrK7nKmEA6IAq/Blynk.Documentation---source?node-id=58-76602&embed-host=share" allowfullscreen></iframe>
+![Filter list](https://github.com/user-attachments/assets/7412f1e1-314c-4ebf-bf02-05b6a6d5c92d)
+
 
 ### Applying Filter Logic
 
