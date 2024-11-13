@@ -12,7 +12,8 @@ A static segment consists of a manual selection of devices. It remains unchanged
 1. Select multiple devices or users.
 2. Use the **Add to Segment** option from the **Bulk Actions** menu.
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YLKVXxLLrTrK7nKmEA6IAq/Blynk.Documentation---source?node-id=57-55531&embed-host=share" allowfullscreen></iframe>
+![Add To Segment](https://github.com/user-attachments/assets/28fc3a06-0b82-4c09-98ae-b5079825bca0)
+
 
 ### Dynamic Segment
 
@@ -22,7 +23,7 @@ A dynamic segment automatically updates based on filters. Any new device that ma
 1. Apply filters in the **All** Segment view to refine your device list.
 2. Click the **Save as Segment** button near the filter setup.
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YLKVXxLLrTrK7nKmEA6IAq/Blynk.Documentation---source?node-id=57-56559&embed-host=share" allowfullscreen></iframe>
+![Save As Segment](https://github.com/user-attachments/assets/71b732f4-a7e3-4461-881e-6a00ce6d8bbb)
 
 ## Managing Segments
 
@@ -40,7 +41,8 @@ For static segments, you can:
 - **Delete** the segment.
 - **Exclude specific devices:** To exclude a device, either open the table actions for the specific row or select multiple rows and use the bulk actions.
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YLKVXxLLrTrK7nKmEA6IAq/Blynk.Documentation---source?node-id=57-59442&embed-host=share" allowfullscreen></iframe>
+![Static Segment Actions](https://github.com/user-attachments/assets/e1ff1ecb-b848-4664-8e41-e1bf72125549)
+
 
 ### Dynamic Segment Actions
 
@@ -49,7 +51,9 @@ For dynamic segments, you can:
 - **Delete** the segment.
 - **Edit Filters** to modify the criteria that define the segment.
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YLKVXxLLrTrK7nKmEA6IAq/Blynk.Documentation---source?node-id=57-64068&embed-host=share" allowfullscreen></iframe>
+![Dynamic Segment Actions](https://github.com/user-attachments/assets/14e550da-4839-41b4-bc16-4a7c912e4310)
+
+
 
 ## Reordering the Segments
 
